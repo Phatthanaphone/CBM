@@ -1,0 +1,88 @@
+body {
+    font-family: Roboto, Arial;
+}
+
+.header-body {
+    position: sticky;
+    top:0;
+    z-index: 1;
+    background-color: white;
+   
+}
+
+.date-and-time-header , .remark-FS6, .action {
+ border-bottom: 1px solid black;
+}
+
+
+
+.date-and-time-header, .date-time-body {
+    width : 200px;
+}
+
+input.FS6.border.border-none {
+  width : 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 3px;
+  font-size: 14px;
+
+}
+
+
+div.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.react-datepicker__input-container {
+  width : 172px;
+}
+
+.gaz-header{
+    border: none;
+}
+
+.gaz-body {
+    width: 100px;
+}
+.counter-body {
+    width: 100px;
+}
+
+.gaz-body input.border.border-none {
+    width: 190px;
+}
+.counter-body input.border.border-none {
+    width: 100px;
+}
+
+.counter {
+    border: none;
+}
+
+textarea.border.border-none {
+ width: 90%;
+}
+
+.table-gaz-counter-FS6{
+    padding:0;
+}
+
+.gaz-header-FS6 {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 6px ;
+    padding-left: 3px;
+    
+}
+
+.gaz-header-FS6-button {
+padding-top: 0;
+padding-bottom: 0;
+padding-right: 3px ;
+padding-left: 3px;
+}
+
+.gaz-body-FS6 {
+   
+}

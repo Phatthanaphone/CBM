@@ -1,0 +1,26 @@
+.thead-table {
+    position: sticky;
+    top:0;
+    z-index: 1;
+    background-color: white;
+}
+
+.date-time-bearing, .remark, .action {
+    border-bottom: 1px solid black;
+}
+
+input.input-value-bearing.border.border-none {
+    width: 100%;
+}
+
+.date-time-bearing {
+    width: 180px;
+}
+
+.value-notesthold-bearing {
+    width: 170px;
+}
+
+.value-testhold-bearing {
+    width: 170px;
+}

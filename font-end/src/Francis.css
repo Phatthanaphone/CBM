@@ -1,0 +1,60 @@
+.thead-table {
+    position: sticky;
+    top:0;
+    z-index: 1;
+    background-color: white;
+}
+
+.date-time-expectval-francis{
+    border-bottom : 1px solid black;
+    width: 50px;
+}
+
+.measurement-value-francis {
+    border-bottom : 1px solid black;
+    width: 94px;
+}
+
+.date-time-francis{
+    width: 180px;
+    border-bottom : 1px solid black;
+}
+
+input.francis.border.border-none {
+    width: 80px;
+}
+
+.input-value-francis {
+    width: 100px;
+}
+
+/* date-time border border-none */
+
+ .remark-francis {
+    width : 200px;
+ }
+
+ textarea.textarea-francis.border.border-none {
+    width:200px;
+ }
+
+.modal-francis {
+    z-index: 100;
+    
+}
+
+.input-francis-modal {
+    width:100%;
+    border-radius: 8px;
+    /* margin-bottom: 8px; */
+    
+    
+}
+
+input#email.input-francis-modal {
+    margin-right: 8px;
+    font-size: 12px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 4px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
