@@ -232,10 +232,12 @@ const Navbar = () => {
 
               
 
-              <Menu as="div" className="relative inline-block text-left pl-5">
+            {data.map((row) => {
+              return (
+                <Menu as="div" className="relative inline-block text-left pl-5">
                 <div>
                   <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-                    Unit 1
+                    {row.unit_name}
                     <ChevronDownIcon
                       className="-mr-1 ml-2 h-5 w-5"
                       aria-hidden="true"
@@ -254,8 +256,7 @@ const Navbar = () => {
                 >
                   <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
-                      {data.map((row) => {
-                        return (
+  
                           <Menu.Item>
                             {({ active }) => (
                               <button
@@ -273,44 +274,64 @@ const Navbar = () => {
                                   "block w-full px-4 py-2 text-left text-sm"
                                 )}
                               >
-                                {row.unit_name}
+                                SF6
                               </button>
                             )}
                           </Menu.Item>
-                        );
-                      })}
-                      {/* <Menu.Item>
-              {({ active }) => (
-                <button    onClick={() => navigate('/doughnutchart')}
-                  className={classNames(
-                    active ?  'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block w-full px-4 py-2 text-left text-sm'
-                  )}
-                >
-                  Unit 2
-                </button>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <button onClick={() => navigate('/linechart')}
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block w-full px-4 py-2 text-left text-sm'
-                  )}
-                >
-                   Unit 3
-                </button>
-              )}
-            </Menu.Item> */}
+                          <Menu.Item>
+                            {({ active }) => (
+                              <button
+                                onClick={() =>
+                                  navigate(`/francis/${row.unit_id}`, {
+                                    state: {
+                                      unit_name: `${row.unit_name}`,
+                                    },
+                                  })
+                                }
+                                className={classNames(
+                                  active
+                                    ? "bg-gray-100 text-gray-900"
+                                    : "text-gray-700",
+                                  "block w-full px-4 py-2 text-left text-sm"
+                                )}
+                              >
+                               Exitation
+                              </button>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <button
+                                onClick={() =>
+                                  navigate(`/bearingManual/${row.unit_id}`, {
+                                    state: {
+                                      unit_name: `${row.unit_name}`,
+                                    },
+                                  })
+                                }
+                                className={classNames(
+                                  active
+                                    ? "bg-gray-100 text-gray-900"
+                                    : "text-gray-700",
+                                  "block w-full px-4 py-2 text-left text-sm"
+                                )}
+                              >
+                                Bearing
+                              </button>
+                            )}
+                          </Menu.Item>
+
+
                     </div>
                   </Menu.Items>
                 </Transition>
               </Menu>
-              <Menu as="div" className="relative inline-block text-left pl-5">
+              )
+            })} 
+              {/* <Menu as="div" className="relative inline-block text-left pl-5">
                 <div>
                   <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-                    Exitation
+                    Unit 2
                     <ChevronDownIcon
                       className="-mr-1 ml-2 h-5 w-5"
                       aria-hidden="true"
@@ -362,7 +383,7 @@ const Navbar = () => {
               <Menu as="div" className="relative inline-block text-left pl-5">
                 <div>
                   <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-                    Bearing
+                    Unit 3
                     <ChevronDownIcon
                       className="-mr-1 ml-2 h-5 w-5"
                       aria-hidden="true"
@@ -410,25 +431,12 @@ const Navbar = () => {
                     </div>
                   </Menu.Items>
                 </Transition>
-              </Menu>
+              </Menu> */}
 
 
               <div className="relative ml-3" style={{ paddingLeft: "12rem" }}>
                 <div>
-                  <button
-                    type="button"
-                    className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                    id="user-menu-button"
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                  >
-                    <span className="sr-only">Open user menu</span>
-                    <img
-                      className="h-8 w-8 rounded-full"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt=""
-                    />
-                  </button>
+
                 </div>
               </div>
             </div>
@@ -446,13 +454,7 @@ const Navbar = () => {
               Home
             </a>
 
-            {/* <a
-              href=""
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => navigate("/barchart")}
-            >
-              Bar Chart
-            </a> */}
+
 
             <a
               href=""

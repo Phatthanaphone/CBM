@@ -34,18 +34,18 @@ ReactDOM.render(
      
         <Router >
           <Routes >
-          <Route  exact
+          {/* <Route  exact
               
               path="/PowerEx"
               element={
                 <>
-                  {/* <RequireAuth> */}
+                  <RequireAuth>
                     <Navbar/>
                     <PowerExChart/>
-                  {/* </RequireAuth> */}
+                  </RequireAuth>
                 </>
               }
-            />
+            /> */}
           <Route  exact
               
               path="/FS6/:unit_id"
